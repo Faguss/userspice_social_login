@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+  <name>Discord Login Plugin</name>
+  <author>Faguss</author>
+<!-- Feel free to include your github repo here -->
+  <website>https://github.com/Faguss/userspice_social_login</website>
+
+<!-- the version of the plugin iteself -->
+  <version>1.0.2</version>
+
+<!-- release date of THIS version -->
+  <release>Dec 14,2019</release>
+
+<!-- the last version of UserSpice you tested the plugin with -->
+  <tested>4.4.14</tested>
+
+<!-- What does your plugin do? -->
+  <description>Join, login, or link your Discord Account to UserSpice</description>
+
+  <!-- This is the launch button in the plugin manager. If it is blank or missing, Configure Plugin will show up. -->
+    <button>Discord Login Config</button>
+</plugin>
