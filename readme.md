@@ -14,7 +14,7 @@ Because Discord/VK plugin conflicts with UserSpice Google login modification of 
 * In the Admin Dashboard go to Permission Levels and add public access to login_discord.php and login_vk.php
 * In the Admin Dashboard go to Plugin Manager and configure the plugins
 
-### Version history:
+## Version history:
 
 #### 14.12.2019
 
