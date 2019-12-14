@@ -7,7 +7,7 @@ Steam / Discord / VK plugins for UserSpice 4.4.14
 Because Discord/VK plugin conflicts with UserSpice Google login modification of some files is necessary.
 
 * Duplicate file users\login.php but with name login_discord.php and login_vk.php
-* Edit users\includes\template\header1_must_include.php and add there condition to disable Google login
+* Edit users\includes\template\header1_must_include.php and add there [condition to disable Google login](https://github.com/Faguss/userspice_social_login/blob/7f1b76afe8ab818585e818e9d24fbbe11247208b/users/includes/template/header1_must_include.php#L98)
 * Copy steam_login, discord_login, vk_login folders to usersc\plugins
 * In the Admin Dashboard go to Plugin Manager and configure the plugins
 
