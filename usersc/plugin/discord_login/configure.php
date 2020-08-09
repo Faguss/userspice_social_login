@@ -17,7 +17,7 @@ if(!Token::check($token)){
      <div class="col-6 offset-3">
        <h2>Discord Login Settings</h2>
 	   <br>
-	   <p>Go to <a href="https://discordapp.com/developers/applications"><u>Discord Developer Portal</u></a> and add a new application. Copy ID numbers and paste them here. Add two redirects:
+	   <p>Go to <a href="https://discord.com/developers/applications"><u>Discord Developer Portal</u></a> and add a new application. Copy ID numbers and paste them here. Add two redirects:
 	   <ul>
 	   <li>https://mydomain.com/userspice/users/login_discord.php</li>
 	   <li>https://mydomain.com/userspice/usersc/plugins/discord_login/link_account.php</li>

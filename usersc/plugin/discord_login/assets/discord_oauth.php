@@ -35,7 +35,7 @@ if ($settings->discord_email)
 if (basename($_SERVER['PHP_SELF']) == "link_account.php")
 	$redirect_uri = substr_replace($redirect_uri, "usersc/plugins/discord_login/link_account.php", strpos($redirect_uri,"users/login_discord.php"));
 
-$link_to_discord  = "https://discordapp.com/api/oauth2/authorize?client_id={$settings->discord_clientid}&redirect_uri={$redirect_uri}&response_type=code&scope={$scope}";
+$link_to_discord  = "https://discord.com/api/oauth2/authorize?client_id={$settings->discord_clientid}&redirect_uri={$redirect_uri}&response_type=code&scope={$scope}";
 
 if (isset($_GET["error"]))
 	echo "<h1>{$_GET["error"]}</h1>";
@@ -47,7 +47,7 @@ if (isset($_GET["error_description"]))
 // When Discord redirects the user back here, there will be a "code" and "state" parameter in the query string
 if (isset($_GET['code'])) {
 	// Exchange the auth code for a token
-	$token = apiRequest('https://discordapp.com/api/oauth2/token', array(
+	$token = apiRequest('https://discord.com/api/oauth2/token', array(
 		'client_id'     => $settings->discord_clientid,
 		'client_secret' => $settings->discord_clientsecret,
 		'grant_type'    => "authorization_code",
@@ -62,7 +62,7 @@ if (isset($_GET['code'])) {
 if (!isset($_SESSION['discord_token']))
 	echo "<a href='{$link_to_discord}'><img class='img-responsive' src='{$us_url_root}usersc/plugins/discord_login/assets/discord.png'></a>";
 else {
-	$discord_userinfo = apiRequest("https://discordapp.com/api/users/@me", false, ["Authorization: Bearer {$_SESSION['discord_token']}"]);
+	$discord_userinfo = apiRequest("https://discord.com/api/users/@me", false, ["Authorization: Bearer {$_SESSION['discord_token']}"]);
 
 	if (isset($discord_userinfo->id)) {
 		$discord_userinfo->img = "https://cdn.discordapp.com/avatars/{$discord_userinfo->id}/{$discord_userinfo->avatar}.png";
